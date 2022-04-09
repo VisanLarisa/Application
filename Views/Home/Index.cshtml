@@ -1,8 +1,12 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<Application.Models.Make>   
+ @*primeste Model*@
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@foreach (var make in Model)
+{
+    <h1>
+        @make.BrandName
+    </h1>
+    <p>
+        @make.OriginCountry
+    </p>
+}
