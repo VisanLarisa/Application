@@ -11,14 +11,12 @@ namespace Application.Models
 {
     public class Car: Entity
     {
-
         public string BodyType { get; set; }
         public int Year { get; set; }
         public float Power { get; set; }
         public float CilindricalCapacity { get; set; }
-        public string Gearbox { get; set; }//
-        public string PollutionNorm { get; set; }//
-        public string Transmission { get; set; }//
+        public PollutionNorm PollutionNorm { get; set; }
+        public Transmission Transmission { get; set; }
         public Fuel Fuel { get; set; }
         public float Kilometers { get; set; }
         public Guid ModelId { get; set; }

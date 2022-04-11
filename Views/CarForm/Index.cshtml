@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Application.Models.Make>
+@*primeste Model*@
+
+@foreach (var make in Model)
+{
+    <h1>
+        @make.BrandName
+    </h1>
+    <p>
+        @make.OriginCountry
+    </p>
+}

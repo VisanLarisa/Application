@@ -5,11 +5,14 @@ using System.Threading.Tasks;
 
 namespace Application.Models.Enums
 {
-    public enum Fuel
+    public enum PollutionNorm
     {
-        Gasoline=0, 
-        Diesel=1,
-        Electric=2,
-        LPG=3
+        Non_euro=0,
+        EURO1=1,
+        EURO2=2,
+        EURO3=3,
+        EURO4=4,
+        EURO5=5,
+        EURO6=6
     }
 }

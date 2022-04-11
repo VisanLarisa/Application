@@ -10,7 +10,7 @@ namespace Application.Models.Base
     public abstract class Entity
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]   //pt autogenerare
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]   //pt autogenerare   //cel mai bun prof
         public Guid Id { get; set; }
     }
 }

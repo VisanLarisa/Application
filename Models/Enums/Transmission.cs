@@ -5,11 +5,10 @@ using System.Threading.Tasks;
 
 namespace Application.Models.Enums
 {
-    public enum Fuel
+    public enum Transmission
     {
-        Gasoline=0, 
-        Diesel=1,
-        Electric=2,
-        LPG=3
+        Manual=0,
+        Automatic=1,
+        Semi_Automatic=2
     }
 }
