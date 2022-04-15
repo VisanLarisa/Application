@@ -10,7 +10,7 @@ namespace Application.Models
     public class Model: Entity
     {
         public string Name { get; set; }
-        public Guid MakeId { get; set; }   //obligatoriu in felul asta; fk
+        public Guid MakeId { get; set; }   //obligatoriu in felul asta; pt fk
         public Make Make { get; set; }    //fk
         public ICollection<Car> Cars { get; set; }
     }

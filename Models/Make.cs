@@ -9,6 +9,7 @@ namespace Application.Models
 { 
     public class Make: Entity
     {
+        public Guid MakeId { get; set; }
         public string BrandName { get; set; }
         public string OriginCountry { get; set; }
         public ICollection<Model> Models { get; set; }  //reverse property
