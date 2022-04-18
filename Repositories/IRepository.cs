@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 
 namespace Application.Models
 {
-    public interface IMakeRepository
+    public interface IRepository <T>
     {
-        IEnumerable<Make> GetAll();
-        Make GetById(Guid MakeId);
-        void Insert(Make make);
-        void Update(Make make);
+        IEnumerable<T> GetAll();
+        T GetById(Guid MakeId);
+        void Insert(T make);
+        void Update(T make);
         void Delete(Guid makeId);
+        void Delete(T make);
         void Save();
     }
 }

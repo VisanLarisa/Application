@@ -6,34 +6,40 @@ using System.Threading.Tasks;
 
 namespace Application.Models.Base
 {
-    public class RepositoryMake : IMakeRepository
+    public class Repository <T> : IRepository <T> where T:Entity
     {
         private readonly ApplicationDbContext _context;
-        public RepositoryMake() => _context = new ApplicationDbContext();   //?
-        public RepositoryMake(ApplicationDbContext context)
+        public Repository() => _context = new ApplicationDbContext();   //?
+        public Repository(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public void Delete(Guid MakeId)
+        public void Delete(Guid id)
         {
-            Make make = _context.Makes.Find(MakeId);
-            _context.Makes.Remove(make);
+            T model = _context.Set<T>().Find(id);
+
+            //T model = _context.Make.Find(id);
+            _context.Set<T>().Remove(model);
+        }
+        public void Delete(T model)
+        {
+            _context.Set<T>().Remove(model);
         }
 
-        public IEnumerable<Make> GetAll()
+        public IEnumerable<T> GetAll()
         {
-            return _context.Makes.ToList();
+            return _context.Set<T>().ToList();
         }
 
-        public Make GetById(Guid MakeId)
+        public T GetById(Guid id)
         {
-            return _context.Makes.Find(MakeId);
+            return _context.Set<T>().Find(id);
         }
 
-        public void Insert(Make make)
+        public void Insert(T model)
         {
-            _context.Makes.Add(make);
+            _context.Set<T>().Add(model);
         }
 
         public void Save()
@@ -41,7 +47,7 @@ namespace Application.Models.Base
             _context.SaveChanges();
         }
 
-        public void Update(Make make)
+        public void Update(T model)
         {
            // _context.Entry(make).State = MakeState.Modified;
         }

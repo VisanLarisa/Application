@@ -11,9 +11,9 @@ namespace Application.Controllers
     public class MakeController : Controller
     {
         private ApplicationDbContext _dbContext;
-        private IMakeRepository _makeRepository;
+        private IRepository <Make> _makeRepository;
 
-        public MakeController(ApplicationDbContext context, IMakeRepository repository)
+        public MakeController(ApplicationDbContext context, IRepository<Make> repository)
         {
             _dbContext = context;
             // _makeRepository = new IMakeRepository(context);
