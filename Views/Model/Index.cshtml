@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Application.Models.Model>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+<p>
+    @Html.ActionLink("Add Model", "AddModel")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Make)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cars)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(mItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(mItem => item.Make.BrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(mItem => item.Cars)
+            </td>
+
+            <td>
+                @*@Html.ActionLink("Edit", "EditModel", new { ModelId = item.ModelId })
+        @Html.ActionLink("Delete", "DeleteModel", new { ModelId = item.ModelId })*@
+
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

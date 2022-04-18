@@ -20,23 +20,25 @@
     @foreach (var item in Model)
      {
 
-<tr>
-    <td>
-        @Html.DisplayFor(makeItem => item.BrandName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.OriginCountry)
-    </td>
+        <tr>
+            <td>
+                @Html.DisplayFor(makeItem => item.BrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OriginCountry)
+            </td>
 
-    <td>
-        @*@Html.ActionLink("Edit", "EditMake", new { MakeId = item.MakeId })
+            <td>
+                @*@Html.ActionLink("Edit", "EditMake", new { MakeId = item.MakeId })
         @Html.ActionLink("Delete", "DeleteMake", new { MakeId = item.MakeId })
-        *@
+                *@
 
-        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-    </td> 
-</tr>
+                @*  <input type="button" value="EDIT" class="btn btn-default" /> |
+        @Html.ActionLink("Edit Make", "EditMake")*@
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td> 
+        </tr>
 }
 </table>
