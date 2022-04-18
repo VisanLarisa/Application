@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Application.Models.Make>
+﻿@model Application.Models.Make
 
 @{
     ViewBag.Title = "DeleteMake";
@@ -8,7 +8,6 @@
 <div>
     @using (Html.BeginForm("Delete", "Make", FormMethod.Post))
     {
-        @Html.HiddenFor(e => e.MakeId)
         <h4>Delete Make</h4>
         <hr />
         <dl class="dl-horizontal">
@@ -19,10 +18,10 @@
                 @Html.DisplayFor(model => model.BrandName)
             </dd>
             <dt>
-                @Html.DisplayNameFor(model => model.OriginCoutry)
+                @Html.DisplayNameFor(model => model.OriginCountry)
             </dt>
             <dd>
-                @Html.DisplayFor(model => model.OriginCoutry)
+                @Html.DisplayFor(model => model.OriginCountry)
             </dd>
 
         </dl>

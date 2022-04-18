@@ -13,16 +13,17 @@ namespace Application.Controllers
         private ApplicationDbContext _dbContext;
         private IMakeRepository _makeRepository;
 
-        public MakeController(ApplicationDbContext context)
+        public MakeController(ApplicationDbContext context, IMakeRepository repository)
         {
             _dbContext = context;
-            //_makeRepository = new IMakeRepository(context);
-        }
-
-        public MakeController(IMakeRepository repository)
-        {
+            // _makeRepository = new IMakeRepository(context);
             _makeRepository = repository;
         }
+
+    //    public MakeController(IMakeRepository repository)
+    //    {
+     //       _makeRepository = repository;
+      //  }
         public IActionResult Index()
         {
             //citire
