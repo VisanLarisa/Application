@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="style/meniu.css">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+    <body style="background-color: black;">
+        <div class="topnav">
+            <a href="meniu.html">Home</a>
+            <a href="clients.html">Clients</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a class="active" href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="LogIn.html">LogIn</a>
+
+          </div>
+          <p style="margin-top: 100px; margin-left: 150px; color: aqua;">Click on each icon to see if products are on stock</p>
+
+          <p id="hideaway" style="margin-top: 10px; margin-left: 150px; visibility: hidden; color: aqua;">Oops! Seems like we don't have anything in the stock for the moment</p>
+          <div class="topnav" style="margin-left: 0px; margin-right: 0px; background-color: black;">
+            <!-- <a height=150px> <img src="Images\audi.jpg" height="150px" onclick="var audio=new Audio(`sounds\\audi.mp3`); audio.play();"></a> -->
+            <a height=150px><img src="Images\BMW.png" height="65px" onclick="
+              var audio=new Audio(`sounds\\bmw.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible'; 
+            "></a>
+            <a height=150px><img src="Images\cadillac.png" height="65px" onclick="
+              var audio=new Audio(`sounds\\cadillac.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible';
+              
+            "></a>
+            <a height=150px><img  src="Images\DACIA.jpg" height="65px" onclick="
+            var audio=new Audio(`sounds\\dacia.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible';
+            "></a>
+            <a height=150px><img  src="Images\fiat.jfif" height="65px" onclick="
+            var audio=new Audio(`sounds\\fiat.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible';
+            "></a>
+            <a  height=150px><img src="Images\ford.jfif" height="65px" onclick="
+            var audio=new Audio(`sounds\\ford.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible';
+            "></a>
+            <a  height=150px><img src="Images\mercedes2.jpg" height="65px" onclick="
+            var audio=new Audio(`sounds\\mercedes.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible';
+            "></a>
+            <!-- <a height=150px><img src="Images\seat.jpg" height="150px" onclick="var audio=new Audio(`sounds\\seat.mp3`); audio.play();"></a> -->
+            <a  height=150px><img src="Images\suzuki.jpg" height="65px" onclick="
+            var audio=new Audio(`sounds\\suzuki.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible';
+            "></a>
+            <a  height=150px><img src="Images\Lexus-Logo.jpg" height="65px" onclick="
+            var audio=new Audio(`sounds\\lexus.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible';
+            "></a>
+            <a  height=150px><img src="Images\bentley.jfif" height="65px" onclick="
+            var audio=new Audio(`sounds\\bentley.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible';
+            "></a>
+            <a  height=150px><img src="Images\jaguar.jpg" height="65px" onclick="
+            var audio=new Audio(`sounds\\jaguar.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible';
+            
+            "></a>
+            <a height=150px><img  src="Images\volvo.jfif" height="65px" onclick="
+            var audio=new Audio(`sounds\\volvo.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible';
+            "></a>
+            <a height=150px><img src="Images\Lamborghini.jpg" height="65px" onclick="
+            var audio=new Audio(`sounds\\lamborghini.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible';
+            "></a>
+
+          </div>
+         <!-- <table>
+             <tr>
+                 <td><img src="Images/BMW.png" width="300" style="padding-left: 5cm; padding-left: 5cm; padding-top:2cm;" onclick="var audio=new Audio(`sounds\\bmw.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible'; "></a></td>
+                 <td><img src="Images/DACIA.jpg" width="300" height ="200" style="padding-left:3cm; padding-top:2cm;" onclick="var audio=new Audio(`sounds\\dacia.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible'; "></td>
+                 <td><img src="Images/Lamborghini.jpg" width="300" height="200" style="padding-left: 3cm; padding-top: 2cm;" onclick="var audio=new Audio(`sounds\\lamborghini.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible'; "></td>
+                 <td><img src="Images/mercedes2.jpg" width="300" height="200" style="padding-left:3cm; padding-top:2cm;" onclick="var audio=new Audio(`sounds\\mercedes.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible'; "></td>
+             </tr>
+            <tr>
+                <td><img src="Images/suzuki.jpg" width="300" height="200"style="padding-left:5cm; padding-top:2cm;"onclick="var audio=new Audio(`sounds\\suzuki.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible'; "></td>
+                <td><img src="Images/fiat.jfif" width="300" height="200" style="padding-left: 3cm; padding-top:2cm"onclick="var audio=new Audio(`sounds\\fiat.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible'; "></td>
+                <td><img src="Images/ford.jfif" width="300" height="200" style="padding-left: 3cm;padding-top:2cm;"onclick="var audio=new Audio(`sounds\\ford.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible'; "></td>
+                <td><img src="Images/jaguar.jpg" width="300" height="200" style="padding-left: 3cm;padding-top:2cm;"onclick="var audio=new Audio(`sounds\\jaguar.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible'; "></td>
+            </tr>
+            <tr>
+                <td><img src="Images/volvo.jfif" width="300" height="200" style="padding-left: 5cm;padding-top:2cm;"onclick="var audio=new Audio(`sounds\\volvo.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible'; "></td>
+                <td><img src="Images/cadillac.png" width="300" height="200" style="padding-left: 3cm; padding-top: 2cm;"onclick="var audio=new Audio(`sounds\\cadillac.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible'; "></td>
+                <td><img src="Images/Lexus-Logo.png" width="300" height="200" style="padding-top: 2cm; padding-left: 3cm;"onclick="var audio=new Audio(`sounds\\lexus.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible'; "></td>
+                <td><img src="Images/bentley.jfif" width="300" height="200" style="padding-left: 3cm; padding-top: 2cm;"onclick="var audio=new Audio(`sounds\\bentley.mp3`); audio.play(); var p=document.getElementById('hideaway'); p.style.visibility='visible'; "></td>
+            </tr>
+         </table> -->
+        <hr>
+    </body>
+</html>

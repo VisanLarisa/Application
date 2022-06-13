@@ -7,6 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Make - Copy\**" />
+    <Compile Remove="Views\NewFolder1\**" />
+    <Compile Remove="Views\NewFolder\**" />
+    <Content Remove="Views\Make - Copy\**" />
+    <Content Remove="Views\NewFolder1\**" />
+    <Content Remove="Views\NewFolder\**" />
+    <EmbeddedResource Remove="Views\Make - Copy\**" />
+    <EmbeddedResource Remove="Views\NewFolder1\**" />
+    <EmbeddedResource Remove="Views\NewFolder\**" />
+    <None Remove="Views\Make - Copy\**" />
+    <None Remove="Views\NewFolder1\**" />
+    <None Remove="Views\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Controllers\CarsController.cs" />
   </ItemGroup>
 
@@ -22,6 +37,99 @@
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.10" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Content\scripts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\CarPhoto.css" />
+    <None Include="wwwroot\css\clients.css" />
+    <None Include="wwwroot\css\contact.css" />
+    <None Include="wwwroot\css\meniu.css" />
+    <None Include="wwwroot\css\Service.css" />
+    <None Include="wwwroot\Images\audi.jpg" />
+    <None Include="wwwroot\Images\bentley.jfif" />
+    <None Include="wwwroot\Images\BMW.png" />
+    <None Include="wwwroot\Images\cadillac.png" />
+    <None Include="wwwroot\Images\color1.jpg" />
+    <None Include="wwwroot\Images\color10.jpg" />
+    <None Include="wwwroot\Images\color11.jpg" />
+    <None Include="wwwroot\Images\color12.jpg" />
+    <None Include="wwwroot\Images\color13.jpg" />
+    <None Include="wwwroot\Images\color14.jpg" />
+    <None Include="wwwroot\Images\color15.jpg" />
+    <None Include="wwwroot\Images\color16.jpg" />
+    <None Include="wwwroot\Images\color17.jpg" />
+    <None Include="wwwroot\Images\color18.jpg" />
+    <None Include="wwwroot\Images\color19.jpg" />
+    <None Include="wwwroot\Images\color2.jpg" />
+    <None Include="wwwroot\Images\color20.jpg" />
+    <None Include="wwwroot\Images\color21.jpg" />
+    <None Include="wwwroot\Images\color22.jpg" />
+    <None Include="wwwroot\Images\color23.jpg" />
+    <None Include="wwwroot\Images\color24.jpg" />
+    <None Include="wwwroot\Images\color25.jpg" />
+    <None Include="wwwroot\Images\color26.jpg" />
+    <None Include="wwwroot\Images\color27.jpg" />
+    <None Include="wwwroot\Images\color28.jpg" />
+    <None Include="wwwroot\Images\color29.jpg" />
+    <None Include="wwwroot\Images\color3.jpg" />
+    <None Include="wwwroot\Images\color4.jpg" />
+    <None Include="wwwroot\Images\color5.jpg" />
+    <None Include="wwwroot\Images\color6.jpg" />
+    <None Include="wwwroot\Images\color7.jpg" />
+    <None Include="wwwroot\Images\color8.jpg" />
+    <None Include="wwwroot\Images\color9.jpg" />
+    <None Include="wwwroot\Images\DACIA.jpg" />
+    <None Include="wwwroot\Images\download.jpg" />
+    <None Include="wwwroot\Images\fiat.jfif" />
+    <None Include="wwwroot\Images\ford.jfif" />
+    <None Include="wwwroot\Images\forTatoo.jpg" />
+    <None Include="wwwroot\Images\Ioana.jpg" />
+    <None Include="wwwroot\Images\Ioana2.jpg" />
+    <None Include="wwwroot\Images\Ioana3.jpg" />
+    <None Include="wwwroot\Images\jaguar.jpg" />
+    <None Include="wwwroot\Images\Lamborghini.jpg" />
+    <None Include="wwwroot\Images\Larisa.png" />
+    <None Include="wwwroot\Images\Lexus-Logo.jpg" />
+    <None Include="wwwroot\Images\Lexus-Logo.png" />
+    <None Include="wwwroot\Images\masina.jpg" />
+    <None Include="wwwroot\Images\mecanic1.jpg" />
+    <None Include="wwwroot\Images\mecanic2.jpg" />
+    <None Include="wwwroot\Images\MERCEDES.jpg" />
+    <None Include="wwwroot\Images\mercedes2.jpg" />
+    <None Include="wwwroot\Images\porsche.png" />
+    <None Include="wwwroot\Images\Schimbare-anvelope.jpg" />
+    <None Include="wwwroot\Images\seat.jpg" />
+    <None Include="wwwroot\Images\Since 1999.png" />
+    <None Include="wwwroot\Images\suzuki.jpg" />
+    <None Include="wwwroot\Images\volvo.jfif" />
+    <None Include="wwwroot\Images\vopsirea-masinii.jpg" />
+    <None Include="wwwroot\js\CarRegister.js" />
+    <None Include="wwwroot\js\contact.js" />
+    <None Include="wwwroot\js\image1.js" />
+    <None Include="wwwroot\js\image2.js" />
+    <None Include="wwwroot\js\image3.js" />
+    <None Include="wwwroot\js\meniu.js" />
+    <None Include="wwwroot\sw.js" />
+    <None Include="wwwroot\js\video.js" />
+    <None Include="wwwroot\sounds\bentley.mp3" />
+    <None Include="wwwroot\sounds\blue.mp3" />
+    <None Include="wwwroot\sounds\BMW %282%29.mp3" />
+    <None Include="wwwroot\sounds\bmw.mp3" />
+    <None Include="wwwroot\sounds\cadillac.mp3" />
+    <None Include="wwwroot\sounds\dacia.mp3" />
+    <None Include="wwwroot\sounds\fiat.mp3" />
+    <None Include="wwwroot\sounds\ford.mp3" />
+    <None Include="wwwroot\sounds\jaguar.mp3" />
+    <None Include="wwwroot\sounds\lamborghini.mp3" />
+    <None Include="wwwroot\sounds\lexus.mp3" />
+    <None Include="wwwroot\sounds\mercedes.mp3" />
+    <None Include="wwwroot\sounds\suzuki.mp3" />
+    <None Include="wwwroot\sounds\volvo.mp3" />
+    <None Include="wwwroot\videos\service_Trim.mp4" />
   </ItemGroup>
 
 </Project>

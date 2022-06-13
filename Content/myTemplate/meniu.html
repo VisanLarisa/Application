@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" type="text/css" href="style/meniu.css"/>
+<script type="text/javascript" src="scripts/meniu.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<script>
+    //if browser support service worker
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    };
+    if ( navigator.geolocation ) { 
+    
+    navigator.geolocation.getCurrentPosition( setCurrentPosition, positionError, { 
+        enableHighAccuracy: false, 
+        timeout: 15000, 
+        maximumAge: 0 
+    } );
+    } 
+
+function setCurrentPosition( position ) { 
+
+    document.querySelector( '.accuracy' ).innerHTML = position.coords.accuracy; 
+    document.querySelector( '.altitude' ).innerHTML = position.coords.altitude; 
+    document.querySelector( '.altitudeAccuracy' ).innerHTML = position.coords.altitudeAccuracy; 
+    document.querySelector( '.heading' ).innerHTML = position.coords.heading; 
+    document.querySelector( '.latitude' ).innerHTML = position.coords.latitude; 
+    document.querySelector( '.longitude' ).innerHTML = position.coords.longitude; 
+    document.querySelector( '.speed' ).innerHTML = position.coords.speed;
+}
+    // if ('serviceWorker' in navigator) {
+    //     try {
+    //         let serviceWorker = await navigator.serviceWorker.register('/sw.js')
+    //         console.log(`Service worker registered ${serviceWorker}`)
+    //     } catch (err) {
+    //         console.error(`Failed to register service worker: ${err}`)
+    //     }
+    // }
+  </script>
+</head>
+<body>
+  <div class="topnav">
+    <a class="active" href="meniu.html">Home</a>
+    <a href="clients.html">Clients</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+    <a href="LogIn.html">LogIn</a>
+
+    <!-- <a href="index.html">index</a> -->
+  </div>
+<div class="main" >
+  <h2 style="text-align: center;" class="glow">Welcome to our service</h2>
+</div>
+<div class="slideshow-container">
+
+<div class="mySlides fade img">
+  <div class="numbertext"></div>
+  <img id="center" src="Images/mecanic1.jpg" style="height: 100%;width: 100%; text-align: center;">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade img">
+  <div class="numbertext"></div>
+  <img id="center" src="Images/mecanic2.jpg"style="height: 100%;width: 100%;text-align:center;" >
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade img">
+  <div class="numbertext"></div>
+  <img  id="center" src="Images/masina.jpg"  style="height: 100%;width: 100%; text-align: center;">
+  <div class="text"></div>
+</div>
+</div>
+<br>
+<div >
+  <span class="dot" ></span> 
+  <span class="dot" ></span> 
+  <span class="dot" ></span> 
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.display = "none";
+}
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); 
+}
+</script>
+<!-- 
+<script>
+  if ('serviceWorker' in navigator) {
+    // Register a service worker hosted at the root of the
+    // site using the default scope.
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      console.log('Service worker registration succeeded:', registration);
+    }, /*catch*/ function(error) {
+      console.log('Service worker registration failed:', error);
+    });
+  } else {
+    console.log('Service workers are not supported.');
+  }
+</script>
+ -->
+<script>
+ if ('serviceWorker' in navigator) { //checks is ws is supported by the browser
+  window.addEventListener('load', () => {
+      navigator.serviceWorker
+          .register('sw.js') //sw uses promises
+          .then(reg => console.log('Service Worker:Registered'))
+          .catch(err => console.log('Service Worker:Error ' + err))
+  })
+}
+
+
+</script>
+</body>
+</html> 

@@ -1,51 +1,64 @@
-﻿@model IEnumerable<Application.Models.Make>
-@*primeste Model*@
-
-<h1>@ViewData["Title"]</h1>
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @* Template Header Files*@
-    <link rel="manifest" href="@Url.Content("~/manifest.json")">
-    <link rel="stylesheet" type="text/css" href="~/css/meniu.css" )" />
-    <script type="text/javascript" src="~/js/meniu.js"></script>
+    <link rel="manifest" href="@Url.Content("~/Content/manifest.json")">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/style/meniu.css")" />
+    <script type="text/javascript" src="@Url.Content("~/Content/")scripts/meniu.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <script>
-        //if browser support service worker
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('~/sw.js');
-        };
-        if (navigator.geolocation) {
+    //if browser support service worker
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    };
+    if ( navigator.geolocation ) {
 
-            navigator.geolocation.getCurrentPosition(setCurrentPosition, positionError, {
-                enableHighAccuracy: false,
-                timeout: 15000,
-                maximumAge: 0
-            });
-        }
+    navigator.geolocation.getCurrentPosition( setCurrentPosition, positionError, {
+        enableHighAccuracy: false,
+        timeout: 15000,
+        maximumAge: 0
+    } );
+    }
 
-        function setCurrentPosition(position) {
+function setCurrentPosition( position ) {
 
-            document.querySelector('.accuracy').innerHTML = position.coords.accuracy;
-            document.querySelector('.altitude').innerHTML = position.coords.altitude;
-            document.querySelector('.altitudeAccuracy').innerHTML = position.coords.altitudeAccuracy;
-            document.querySelector('.heading').innerHTML = position.coords.heading;
-            document.querySelector('.latitude').innerHTML = position.coords.latitude;
-            document.querySelector('.longitude').innerHTML = position.coords.longitude;
-            document.querySelector('.speed').innerHTML = position.coords.speed;
-        }
-
+    document.querySelector( '.accuracy' ).innerHTML = position.coords.accuracy;
+    document.querySelector( '.altitude' ).innerHTML = position.coords.altitude;
+    document.querySelector( '.altitudeAccuracy' ).innerHTML = position.coords.altitudeAccuracy;
+    document.querySelector( '.heading' ).innerHTML = position.coords.heading;
+    document.querySelector( '.latitude' ).innerHTML = position.coords.latitude;
+    document.querySelector( '.longitude' ).innerHTML = position.coords.longitude;
+    document.querySelector( '.speed' ).innerHTML = position.coords.speed;
+}
+    // if ('serviceWorker' in navigator) {
+    //     try {
+    //         let serviceWorker = await navigator.serviceWorker.register('/sw.js')
+    //         console.log(`Service worker registered ${serviceWorker}`)
+    //     } catch (err) {
+    //         console.error(`Failed to register service worker: ${err}`)
+    //     }
+    // }
     </script>
 </head>
 <body>
 
+    <div class="topnav">
+        <a class="active" href="meniu.html">Home</a>
+        <a href="clients.html">Clients</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+        <a href="LogIn.html">LogIn</a>
+
+        <!-- <a href="index.html">index</a> -->
+    </div>
     <div class="main">
         <h2 style="text-align: center;" class="glow">Welcome to our service</h2>
     </div>
@@ -133,8 +146,8 @@
 
     </script>
 
-    @*<div>
+    <div>
         @RenderBody()
-    </div>*@
+    </div>
 </body>
 </html>

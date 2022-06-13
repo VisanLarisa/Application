@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Application.Models.Make>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+<p>
+    @Html.ActionLink("Add Make", "AddMake")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(make => make.BrandName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(make => make.OriginCountry)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+     {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(makeItem => item.BrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OriginCountry)
+            </td>
+
+            <td>
+                @*@Html.ActionLink("Edit", "EditMake", new { MakeId = item.MakeId })
+        @Html.ActionLink("Delete", "DeleteMake", new { MakeId = item.MakeId })
+                *@
+
+                @*  <input type="button" value="EDIT" class="btn btn-default" /> |
+        @Html.ActionLink("Edit Make", "EditMake")*@
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td> 
+        </tr>
+}
+</table>

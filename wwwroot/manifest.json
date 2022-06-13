@@ -1,0 +1,20 @@
+{
+    "short_name": "CS",
+    "name": "Radiator Springs Auto Service",
+    "icons": [
+      {
+        "src": "Images/audi.jpg",
+        "type": "image/jpg",
+        "sizes": "1280x720"
+      },
+      {
+        "src": "Images/BMW.png",
+        "type": "image/png",
+        "sizes": "2048x2048"
+      }
+    ],
+    "start_url": "meniu.html",
+    "background_color": "#000000",
+    "display": "standalone",
+    "theme_color": "#ff0000"
+}

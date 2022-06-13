@@ -1,0 +1,26 @@
+ /* html, body{
+    font: 
+}  */
+
+#map{
+    /* width: 100vw;
+    height: 100vh; */  /*adica 100% din ecran*/
+    width: 80%;
+    height: 700px;
+    border:7px solid grey;
+    /* border-radius: 50; */
+}
+
+.toolbar{
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    padding: 10px;
+    z-index:9999;   /* ca butonul sa se afle in fata hartii */
+}
+
+html {
+    box-sizing: border-box;
+    }
+    *, *:before, *:after {
+    box-sizing: inherit;} 

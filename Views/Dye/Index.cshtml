@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/meniu.css">
+    <link rel="stylesheet" type="text/css" href="~/css/aboutSection.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<body onload="init1(); init2()">
+
+    <h3 style="color: gainsboro; text-align: center;">
+        Here you can see the available options for styling your car through colors </h2>
+        <h3>----</h3>
+        <h3 style="color: whitesmoke;">
+            We can add a tatoo to your car; Choose from the following available models: </h2>
+            <h3>----</h3>
+
+            <canvas id="MyCanvas1" width="600%" height="400" style="border: 3px solid blue;"></canvas>
+            <script src="~/js\image1.js"></script>
+
+            <canvas id="MyCanvas2" width="600%" height="400" style="border: 3px solid blue;"></canvas>
+            <script src="~/js\image2.js"></script>
+
+            <!-- <canvas id="MyCanvas3" width="600" height="400" style="border: 3px solid blue;"></canvas>
+            <script src="scripts\image3.js"></script> -->
+            <h2 style="color: gainsboro; text-align: center;">Choose the car you own for suggestions: </h2>
+            <div class="topnav" style="margin-left: 0px; margin-right: 0px; background-color: black;">
+                <!-- <a height=150px> <img src="Images\audi.jpg" height="150px" onclick="var audio=new Audio(`sounds\\audi.mp3`); audio.play();"></a> -->
+                <a height=150px>
+                    <img src="~/Images\BMW.png" height="150px" onclick="
+              var audio=new Audio(`sounds\\bmw.mp3`); audio.play();
+              image1=getElementById('img1');  image1.classList.remove('active');   image1.classList.add('active');
+              image2=getElementById('img2');  image2.classList.remove('active');
+              image3=getElementById('img3');  image3.classList.remove('active');
+              image4=getElementById('img4');  image4.classList.remove('active');
+              image5=getElementById('img5');  image5.classList.remove('active'); image5.classList.add('active');
+              image6=getElementById('img6');  image6.classList.remove('active');
+              image7=getElementById('img7');  image7.classList.remove('active');
+              image8=getElementById('img8');  image8.classList.remove('active');
+              image9=getElementById('img9');  image9.classList.remove('active');
+              image10=getElementById('img10');  image10.classList.remove('active');
+              image11=getElementById('img11');  image11.classList.remove('active');
+              image12=getElementById('img12');  image12.classList.remove('active');
+              image13=getElementById('img13');  image13.classList.remove('active');
+              image14=getElementById('img14');   image14.classList.add('active'); //image14.classList.remove('active');
+              image15=getElementById('img15');  image15.classList.remove('active');
+              image16=getElementById('img16');  image16.classList.remove('active');
+              image17=getElementById('img17');  image17.classList.remove('active');
+              image18=getElementById('img18');  image18.classList.remove('active');image18.classList.add('active');
+              image19=getElementById('img19');  image19.classList.remove('active');
+              image20=getElementById('img20');  image20.classList.remove('active');
+              image21=getElementById('img21');  image21.classList.remove('active');
+              image22=getElementById('img22');  image22.classList.remove('active');  image22.classList.add('active');
+              image23=getElementById('img23');  image23.classList.remove('active');
+              image24=getElementById('img24');  image24.classList.remove('active');
+              image25=getElementById('img25');  image25.classList.remove('active');
+              image26=getElementById('img26');  image26.classList.remove('active');
+              image27=getElementById('img27');  image27.classList.remove('active');
+              image28=getElementById('img28');  image28.classList.remove('active');
+            ">
+                </a>
+                <a height=150px>
+                    <img src="~/Images\cadillac.png" height="150px" onclick="
+              var audio=new Audio(`sounds\\cadillac.mp3`); audio.play();
+              image1=getElementById('img1');  image1.classList.remove('active');   image1.classList.add('active');
+              image2=getElementById('img2');  image2.classList.remove('active');
+              image3=getElementById('img3');  image3.classList.remove('active');image3.classList.add('active');
+              image4=getElementById('img4');  image4.classList.remove('active');
+              image5=getElementById('img5');  image5.classList.remove('active');
+              image6=getElementById('img6');  image6.classList.remove('active'); image6.classList.add('active');
+              image7=getElementById('img7');  image7.classList.remove('active');
+              image8=getElementById('img8');  image8.classList.remove('active');
+              image9=getElementById('img9');  image9.classList.remove('active');
+              image10=getElementById('img10');  image10.classList.remove('active');
+              image11=getElementById('img11');  image11.classList.remove('active');
+              image12=getElementById('img12');  image12.classList.remove('active');image12.classList.add('active');
+              image13=getElementById('img13');  image13.classList.remove('active');
+              image14=getElementById('img14');  image14.classList.remove('active');
+              image15=getElementById('img15');  image15.classList.remove('active');
+              image16=getElementById('img16');  image16.classList.remove('active');
+              image17=getElementById('img17');  image17.classList.remove('active');
+              image18=getElementById('img18');  image18.classList.remove('active');
+              image19=getElementById('img19');  image19.classList.remove('active');
+              image20=getElementById('img20');  image20.classList.remove('active');
+              image21=getElementById('img21');  image21.classList.remove('active');
+              image22=getElementById('img22');  image22.classList.remove('active');
+              image23=getElementById('img23');  image23.classList.remove('active');
+              image24=getElementById('img24');  image24.classList.remove('active');
+              image25=getElementById('img25');  image25.classList.remove('active');
+              image26=getElementById('img26');  image26.classList.remove('active');
+              image27=getElementById('img27');  image27.classList.remove('active');
+              image28=getElementById('img28');  image28.classList.remove('active'); image28.classList.add('active');
+
+            ">
+                </a>
+                <a height=150px>
+                    <img src="~/Images\DACIA.jpg" height="150px" onclick="
+            var audio=new Audio(`sounds\\dacia.mp3`); audio.play();
+            image1=getElementById('img1');  image1.classList.remove('active');
+              image2=getElementById('img2');  image2.classList.remove('active');
+              image3=getElementById('img3');  image3.classList.remove('active');image3.classList.add('active');
+              image4=getElementById('img4');  image4.classList.remove('active');
+              image5=getElementById('img5');  image5.classList.remove('active');
+              image6=getElementById('img6');  image6.classList.remove('active');
+              image7=getElementById('img7');  image7.classList.remove('active');
+              image8=getElementById('img8');  image8.classList.remove('active');
+              image9=getElementById('img9');  image9.classList.remove('active');image9.classList.add('active');
+              image10=getElementById('img10');  image10.classList.remove('active');
+              image11=getElementById('img11');  image11.classList.remove('active');
+              image12=getElementById('img12');  image12.classList.remove('active');image12.classList.add('active');
+              image13=getElementById('img13');  image13.classList.remove('active');
+              image14=getElementById('img14');  image14.classList.remove('active');
+              image15=getElementById('img15');  image15.classList.remove('active');
+              image16=getElementById('img16');  image16.classList.remove('active');
+              image17=getElementById('img17');  image17.classList.remove('active');
+              image18=getElementById('img18');  image18.classList.remove('active');
+              image19=getElementById('img19');  image19.classList.remove('active');
+              image20=getElementById('img20');  image20.classList.remove('active');image20.classList.add('active');
+              image21=getElementById('img21');  image21.classList.remove('active');image21.classList.add('active');
+              image22=getElementById('img22');  image22.classList.remove('active');
+              image23=getElementById('img23');  image23.classList.remove('active');
+              image24=getElementById('img24');  image24.classList.remove('active');image24.classList.add('active');
+              image25=getElementById('img25');  image25.classList.remove('active');
+              image26=getElementById('img26');  image26.classList.remove('active');
+              image27=getElementById('img27');  image27.classList.remove('active');
+              image28=getElementById('img28');  image28.classList.remove('active');
+            ">
+                </a>
+                <a height=150px>
+                    <img src="~/Images\fiat.jfif" height="150px" onclick="
+            var audio=new Audio(`sounds\\fiat.mp3`); audio.play();
+            image1=getElementById('img1');  image1.classList.remove('active');
+              image2=getElementById('img2');  image2.classList.remove('active'); image2.classList.add('active');
+              image3=getElementById('img3');  image3.classList.remove('active');
+              image4=getElementById('img4');  image4.classList.remove('active');
+              image5=getElementById('img5');  image5.classList.remove('active'); image5.classList.add('active');
+              image6=getElementById('img6');  image6.classList.remove('active');
+              image7=getElementById('img7');  image7.classList.remove('active'); image7.classList.add('active');
+              image8=getElementById('img8');  image8.classList.remove('active');
+              image9=getElementById('img9');  image9.classList.remove('active');
+              image10=getElementById('img10');  image10.classList.remove('active');
+              image11=getElementById('img11');  image11.classList.remove('active'); image11.classList.add('active');
+              image12=getElementById('img12');  image12.classList.remove('active');
+              image13=getElementById('img13');  image13.classList.remove('active'); image13.classList.add('active');
+              image14=getElementById('img14');  image14.classList.remove('active');  image14.classList.add('active');
+              image15=getElementById('img15');  image15.classList.remove('active'); image15.classList.add('active');
+              image16=getElementById('img16');  image16.classList.remove('active');
+              image17=getElementById('img17');  image17.classList.remove('active');
+              image18=getElementById('img18');  image18.classList.remove('active');
+              image19=getElementById('img19');  image19.classList.remove('active');image19.classList.add('active');
+              image20=getElementById('img20');  image20.classList.remove('active');
+              image21=getElementById('img21');  image21.classList.remove('active');
+              image22=getElementById('img22');  image22.classList.remove('active');  image22.classList.add('active');
+              image23=getElementById('img23');  image23.classList.remove('active');
+              image24=getElementById('img24');  image24.classList.remove('active');
+              image25=getElementById('img25');  image25.classList.remove('active');
+              image26=getElementById('img26');  image26.classList.remove('active');
+              image27=getElementById('img27');  image27.classList.remove('active');
+              image28=getElementById('img28');  image28.classList.remove('active');
+            ">
+                </a>
+                <a height=150px>
+                    <img src="~/Images\ford.jfif" height="150px" onclick="
+            var audio=new Audio(`sounds\\ford.mp3`); audio.play();
+            image1=getElementById('img1');  image1.classList.remove('active');   image1.classList.add('active');
+              image2=getElementById('img2');  image2.classList.remove('active');
+              image3=getElementById('img3');  image3.classList.remove('active');
+              image4=getElementById('img4');  image4.classList.remove('active');image4.classList.add('active');
+              image5=getElementById('img5');  image5.classList.remove('active');
+              image6=getElementById('img6');  image6.classList.remove('active');
+              image7=getElementById('img7');  image7.classList.remove('active');
+              image8=getElementById('img8');  image8.classList.remove('active');
+              image9=getElementById('img9');  image9.classList.remove('active');
+              image10=getElementById('img10');  image10.classList.remove('active');
+              image11=getElementById('img11');  image11.classList.remove('active');
+              image12=getElementById('img12');  image12.classList.remove('active');
+              image13=getElementById('img13');  image13.classList.remove('active');
+              image14=getElementById('img14');  image14.classList.remove('active');
+              image15=getElementById('img15');  image15.classList.remove('active');
+              image16=getElementById('img16');  image16.classList.remove('active');
+              image17=getElementById('img17');  image17.classList.remove('active');
+              image18=getElementById('img18');  image18.classList.remove('active');
+              image19=getElementById('img19');  image19.classList.remove('active');
+              image20=getElementById('img20');  image20.classList.remove('active');
+              image21=getElementById('img21');  image21.classList.remove('active');
+              image22=getElementById('img22');  image22.classList.remove('active');  image22.classList.add('active');
+              image23=getElementById('img23');  image23.classList.remove('active');
+              image24=getElementById('img24');  image24.classList.remove('active');
+              image25=getElementById('img25');  image25.classList.remove('active');
+              image26=getElementById('img26');  image26.classList.remove('active');
+              image27=getElementById('img27');  image27.classList.remove('active');
+              image28=getElementById('img28');  image28.classList.remove('active');
+            ">
+                </a>
+                <a height=150px>
+                    <img src="~/Images\mercedes2.jpg" height="150px" onclick="
+            var audio=new Audio(`sounds\\mercedes.mp3`); audio.play();
+            image1=getElementById('img1');  image1.classList.remove('active');   image1.classList.add('active');
+              image2=getElementById('img2');  image2.classList.remove('active');
+              image3=getElementById('img3');  image3.classList.remove('active');
+              image4=getElementById('img4');  image4.classList.remove('active');
+              image5=getElementById('img5');  image5.classList.remove('active');
+              image6=getElementById('img6');  image6.classList.remove('active');
+              image7=getElementById('img7');  image7.classList.remove('active'); image7.classList.add('active');
+              image8=getElementById('img8');  image8.classList.remove('active');
+              image9=getElementById('img9');  image9.classList.remove('active');
+              image10=getElementById('img10');  image10.classList.remove('active');
+              image11=getElementById('img11');  image11.classList.remove('active');
+              image12=getElementById('img12');  image12.classList.remove('active');
+              image13=getElementById('img13');  image13.classList.remove('active');
+              image14=getElementById('img14');  image14.classList.remove('active');
+              image15=getElementById('img15');  image15.classList.remove('active');
+              image16=getElementById('img16');  image16.classList.remove('active');
+              image17=getElementById('img17');  image17.classList.remove('active');
+              image18=getElementById('img18');  image18.classList.remove('active');image18.classList.add('active');
+              image19=getElementById('img19');  image19.classList.remove('active');
+              image20=getElementById('img20');  image20.classList.remove('active');
+              image21=getElementById('img21');  image21.classList.remove('active');
+              image22=getElementById('img22');  image22.classList.remove('active');
+              image23=getElementById('img23');  image23.classList.remove('active');
+              image24=getElementById('img24');  image24.classList.remove('active');
+              image25=getElementById('img25');  image25.classList.remove('active');image25.classList.add('active');
+              image26=getElementById('img26');  image26.classList.remove('active');
+              image27=getElementById('img27');  image27.classList.remove('active');
+              image28=getElementById('img28');  image28.classList.remove('active');
+            ">
+                </a>
+                <!-- <a height=150px><img src="Images\seat.jpg" height="150px" onclick="var audio=new Audio(`sounds\\seat.mp3`); audio.play();"></a> -->
+                <a height=150px>
+                    <img src="~/Images\suzuki.jpg" height="150px" onclick="
+            var audio=new Audio(`sounds\\suzuki.mp3`); audio.play();
+            image1=getElementById('img1');  image1.classList.remove('active');   image1.classList.add('active');
+              image2=getElementById('img2');  image2.classList.remove('active');
+              image3=getElementById('img3');  image3.classList.remove('active');
+              image4=getElementById('img4');  image4.classList.remove('active');
+              image5=getElementById('img5');  image5.classList.remove('active'); image5.classList.add('active');
+              image6=getElementById('img6');  image6.classList.remove('active');
+              image7=getElementById('img7');  image7.classList.remove('active');
+              image8=getElementById('img8');  image8.classList.remove('active');
+              image9=getElementById('img9');  image9.classList.remove('active');
+              image10=getElementById('img10');  image10.classList.remove('active');
+              image11=getElementById('img11');  image11.classList.remove('active');
+              image12=getElementById('img12');  image12.classList.remove('active');
+              image13=getElementById('img13');  image13.classList.remove('active');
+              image14=getElementById('img14');  image14.classList.remove('active');
+              image15=getElementById('img15');  image15.classList.remove('active');
+              image16=getElementById('img16');  image16.classList.remove('active'); image16.classList.add('active');
+              image17=getElementById('img17');  image17.classList.remove('active');
+              image18=getElementById('img18');  image18.classList.remove('active');
+              image19=getElementById('img19');  image19.classList.remove('active');
+              image20=getElementById('img20');  image20.classList.remove('active'); image20.classList.add('active');
+              image21=getElementById('img21');  image21.classList.remove('active');
+              image22=getElementById('img22');  image22.classList.remove('active');
+              image23=getElementById('img23');  image23.classList.remove('active'); image23.classList.add('active');
+              image24=getElementById('img24');  image24.classList.remove('active');
+              image25=getElementById('img25');  image25.classList.remove('active');
+              image26=getElementById('img26');  image26.classList.remove('active');
+              image27=getElementById('img27');  image27.classList.remove('active');
+              image28=getElementById('img28');  image28.classList.remove('active');
+            ">
+                </a>
+                <a height=150px>
+                    <img src="~/Images\Lexus-Logo.jpg" height="150px" onclick="
+            var audio=new Audio(`sounds\\lexus.mp3`); audio.play();
+            image1=getElementById('img1');  image1.classList.remove('active');
+              image2=getElementById('img2');  image2.classList.remove('active');
+              image3=getElementById('img3');  image3.classList.remove('active');
+              image4=getElementById('img4');  image4.classList.remove('active');
+              image5=getElementById('img5');  image5.classList.remove('active'); image5.classList.add('active');
+              image6=getElementById('img6');  image6.classList.remove('active');
+              image7=getElementById('img7');  image7.classList.remove('active');
+              image8=getElementById('img8');  image8.classList.remove('active');
+              image9=getElementById('img9');  image9.classList.remove('active');
+              image10=getElementById('img10');  image10.classList.remove('active'); image10.classList.add('active');
+              image11=getElementById('img11');  image11.classList.remove('active');
+              image12=getElementById('img12');  image12.classList.remove('active'); image12.classList.add('active');
+              image13=getElementById('img13');  image13.classList.remove('active');
+              image14=getElementById('img14');  image14.classList.remove('active');
+              image15=getElementById('img15');  image15.classList.remove('active');
+              image16=getElementById('img16');  image16.classList.remove('active');
+              image17=getElementById('img17');  image17.classList.remove('active');
+              image18=getElementById('img18');  image18.classList.remove('active');image18.classList.add('active');
+              image19=getElementById('img19');  image19.classList.remove('active');
+              image20=getElementById('img20');  image20.classList.remove('active');
+              image21=getElementById('img21');  image21.classList.remove('active');
+              image22=getElementById('img22');  image22.classList.remove('active');
+              image23=getElementById('img23');  image23.classList.remove('active');
+              image24=getElementById('img24');  image24.classList.remove('active');image24.classList.add('active');
+              image25=getElementById('img25');  image25.classList.remove('active');
+              image26=getElementById('img26');  image26.classList.remove('active');
+              image27=getElementById('img27');  image27.classList.remove('active');
+              image28=getElementById('img28');  image28.classList.remove('active');
+            ">
+                </a>
+                <a height=150px>
+                    <img src="~/Images\bentley.jfif" height="150px" onclick="
+            var audio=new Audio(`sounds\\bentley.mp3`); audio.play();
+            image1=getElementById('img1');  image1.classList.remove('active');   image1.classList.add('active');
+              image2=getElementById('img2');  image2.classList.remove('active');
+              image3=getElementById('img3');  image3.classList.remove('active');
+              image4=getElementById('img4');  image4.classList.remove('active');
+              image5=getElementById('img5');  image5.classList.remove('active');
+              image6=getElementById('img6');  image6.classList.remove('active');
+              image7=getElementById('img7');  image7.classList.remove('active');
+              image8=getElementById('img8');  image8.classList.remove('active');
+              image9=getElementById('img9');  image9.classList.remove('active');
+              image10=getElementById('img10');  image10.classList.remove('active');
+              image11=getElementById('img11');  image11.classList.remove('active');
+              image12=getElementById('img12');  image12.classList.remove('active');
+              image13=getElementById('img13');  image13.classList.remove('active');
+              image14=getElementById('img14');  image14.classList.remove('active');
+              image15=getElementById('img15');  image15.classList.remove('active');
+              image16=getElementById('img16');  image16.classList.remove('active');
+              image17=getElementById('img17');  image17.classList.remove('active');
+              image18=getElementById('img18');  image18.classList.remove('active');
+              image19=getElementById('img19');  image19.classList.remove('active');
+              image20=getElementById('img20');  image20.classList.remove('active');
+              image21=getElementById('img21');  image21.classList.remove('active');
+              image22=getElementById('img22');  image22.classList.remove('active');  image22.classList.add('active');
+              image23=getElementById('img23');  image23.classList.remove('active');
+              image24=getElementById('img24');  image24.classList.remove('active');
+              image25=getElementById('img25');  image25.classList.remove('active');image25.classList.add('active');
+              image26=getElementById('img26');  image26.classList.remove('active');
+              image27=getElementById('img27');  image27.classList.remove('active'); image27.classList.add('active');
+              image28=getElementById('img28');  image28.classList.remove('active');
+            ">
+                </a>
+                <a height=150px>
+                    <img src="~/Images\jaguar.jpg" height="150px" onclick="
+            var audio=new Audio(`sounds\\jaguar.mp3`); audio.play();
+            image1=getElementById('img1');  image1.classList.remove('active');   image1.classList.add('active');
+              image2=getElementById('img2');  image2.classList.remove('active');
+              image3=getElementById('img3');  image3.classList.remove('active');image3.classList.add('active');
+              image4=getElementById('img4');  image4.classList.remove('active');
+              image5=getElementById('img5');  image5.classList.remove('active');
+              image6=getElementById('img6');  image6.classList.remove('active');
+              image7=getElementById('img7');  image7.classList.remove('active');
+              image8=getElementById('img8');  image8.classList.remove('active');
+              image9=getElementById('img9');  image9.classList.remove('active');
+              image10=getElementById('img10');  image10.classList.remove('active');
+              image11=getElementById('img11');  image11.classList.remove('active');
+              image12=getElementById('img12');  image12.classList.remove('active');
+              image13=getElementById('img13');  image13.classList.remove('active');
+              image14=getElementById('img14');  image14.classList.remove('active');
+              image15=getElementById('img15');  image15.classList.remove('active');
+              image16=getElementById('img16');  image16.classList.remove('active');
+              image17=getElementById('img17');  image17.classList.remove('active');
+              image18=getElementById('img18');  image18.classList.remove('active');image18.classList.add('active');
+              image19=getElementById('img19');  image19.classList.remove('active');
+              image20=getElementById('img20');  image20.classList.remove('active');
+              image21=getElementById('img21');  image21.classList.remove('active');
+              image22=getElementById('img22');  image22.classList.remove('active');
+              image23=getElementById('img23');  image23.classList.remove('active');
+              image24=getElementById('img24');  image24.classList.remove('active');
+              image25=getElementById('img25');  image25.classList.remove('active');
+              image26=getElementById('img26');  image26.classList.remove('active');
+              image27=getElementById('img27');  image27.classList.remove('active');
+              image28=getElementById('img28');  image28.classList.remove('active');image28.classList.add('active');
+
+            ">
+                </a>
+                <a height=150px>
+                    <img src="~/Images\volvo.jfif" height="150px" onclick="
+            var audio=new Audio(`sounds\\volvo.mp3`); audio.play();
+            image1=getElementById('img1');  image1.classList.remove('active');   image1.classList.add('active');
+              image2=getElementById('img2');  image2.classList.remove('active');
+              image3=getElementById('img3');  image3.classList.remove('active');
+              image4=getElementById('img4');  image4.classList.remove('active');
+              image5=getElementById('img5');  image5.classList.remove('active');
+              image6=getElementById('img6');  image6.classList.remove('active');
+              image7=getElementById('img7');  image7.classList.remove('active'); image7.classList.add('active');
+              image8=getElementById('img8');  image8.classList.remove('active');
+              image9=getElementById('img9');  image9.classList.remove('active');
+              image10=getElementById('img10');  image10.classList.remove('active');
+              image11=getElementById('img11');  image11.classList.remove('active');
+              image12=getElementById('img12');  image12.classList.remove('active');
+              image13=getElementById('img13');  image13.classList.remove('active');
+              image14=getElementById('img14');  image14.classList.remove('active');
+              image15=getElementById('img15');  image15.classList.remove('active');
+              image16=getElementById('img16');  image16.classList.remove('active');
+              image17=getElementById('img17');  image17.classList.remove('active');image17.classList.add('active');
+              image18=getElementById('img18');  image18.classList.remove('active');
+              image19=getElementById('img19');  image19.classList.remove('active');
+              image20=getElementById('img20');  image20.classList.remove('active');
+              image21=getElementById('img21');  image21.classList.remove('active');
+              image22=getElementById('img22');  image22.classList.remove('active');  image22.classList.add('active');
+              image23=getElementById('img23');  image23.classList.remove('active');
+              image24=getElementById('img24');  image24.classList.remove('active');
+              image25=getElementById('img25');  image25.classList.remove('active');
+              image26=getElementById('img26');  image26.classList.remove('active');
+              image27=getElementById('img27');  image27.classList.remove('active');
+              image28=getElementById('img28');  image28.classList.remove('active');
+            ">
+                </a>
+                <a height=150px>
+                    <img src="~/Images\Lamborghini.jpg" height="150px" onclick="
+            var audio=new Audio(`sounds\\lamborghini.mp3`); audio.play();
+            image1=getElementById('img1');  image1.classList.remove('active');
+              image2=getElementById('img2');  image2.classList.remove('active');
+              image3=getElementById('img3');  image3.classList.remove('active'); image3.classList.add('active');
+              image4=getElementById('img4');  image4.classList.remove('active');
+              image5=getElementById('img5');  image5.classList.remove('active');
+              image6=getElementById('img6');  image6.classList.remove('active');
+              image7=getElementById('img7');  image7.classList.remove('active');
+              image8=getElementById('img8');  image8.classList.remove('active');
+              image9=getElementById('img9');  image9.classList.remove('active');
+              image10=getElementById('img10');  image10.classList.remove('active');
+              image11=getElementById('img11');  image11.classList.remove('active');image11.classList.add('active');
+              image12=getElementById('img12');  image12.classList.remove('active');
+              image13=getElementById('img13');  image13.classList.remove('active');
+              image14=getElementById('img14');  image14.classList.remove('active');
+              image15=getElementById('img15');  image15.classList.remove('active'); image15.classList.add('active');
+              image16=getElementById('img16');  image16.classList.remove('active');
+              image17=getElementById('img17');  image17.classList.remove('active');
+              image18=getElementById('img18');  image18.classList.remove('active');image18.classList.add('active');
+              image19=getElementById('img19');  image19.classList.remove('active');
+              image20=getElementById('img20');  image20.classList.remove('active');
+              image21=getElementById('img21');  image21.classList.remove('active');
+              image22=getElementById('img22');  image22.classList.remove('active');
+              image23=getElementById('img23');  image23.classList.remove('active');
+              image24=getElementById('img24');  image24.classList.remove('active');image24.classList.add('active');
+              image25=getElementById('img25');  image25.classList.remove('active');
+              image26=getElementById('img26');  image26.classList.remove('active');
+              image27=getElementById('img27');  image27.classList.remove('active');
+              image28=getElementById('img28');  image28.classList.remove('active');
+            ">
+                </a>
+
+            </div>
+
+
+
+            <h3>----</h3>
+            <h3 style="color: whitesmoke;">
+                This is the pallete of colors that we provide. If you select your car from the exemplified models above, you will see highlighted some suggested colors </h2>
+                <hr>
+                <h3>----</h3>
+
+                <div class="topnav" style="margin-left: 0px; margin-right: 0px; background-color: white;">
+                    <a id="img1" height=150px> <img src="~/Images\color1.jpg" height="80px">P1</a>
+                    <a id="img2" height=150px> <img src="~/Images\color2.jpg" height="80px">P2</a>
+                    <a id="img3" height=150px> <img src="~/Images\color3.jpg" height="80px">P3</a>
+                    <a id="img4" height=150px> <img src="~/Images\color4.jpg" height="80px">P4</a>
+                    <a id="img5" height=150px> <img src="~/Images\color5.jpg" height="80px">P5</a>
+                    <a id="img6" height=150px> <img src="~/Images\color6.jpg" height="80px">P6</a>
+                    <a id="img7" height=150px> <img src="~/Images\color7.jpg" height="80px">P7</a>
+                    <a id="img8" height=150px> <img src="~/Images\color8.jpg" height="80px">P8</a>
+                    <a id="img9" height=150px> <img src="~/Images\color9.jpg" height="80px">P9</a>
+                    <a id="img10" height=150px> <img src="~/Images\color10.jpg" height="80px">P10</a>
+                    <a id="img11" height=150px> <img src="~/Images\color11.jpg" height="80px">P11</a>
+                    <a id="img12" height=150px> <img src="~/Images\color12.jpg" height="80px">P12</a>
+                    <a id="img13" height=150px> <img src="~/Images\color13.jpg" height="80px">P13</a>
+                    <a id="img14" height=150px> <img src="~/Images\color14.jpg" height="80px">P14</a>
+                    <a id="img15" height=150px> <img src="~/Images\color15.jpg" height="80px">P15</a>
+                    <a id="img16" height=150px> <img src="~/Images\color16.jpg" height="80px">P16</a>
+                    <a id="img17" height=150px> <img src="~/Images\color17.jpg" height="80px">P17</a>
+                    <a id="img18" height=150px> <img src="~/Images\color18.jpg" height="80px">P18</a>
+                    <a id="img19" height=150px> <img src="~/Images\color19.jpg" height="80px">P19</a>
+                    <a id="img20" height=150px> <img src="~/Images\color20.jpg" height="80px">P20</a>
+                    <a id="img21" height=150px> <img src="~/Images\color21.jpg" height="80px">P21</a>
+                    <a id="img22" height=150px> <img src="~/Images\color22.jpg" height="80px">P22</a>
+                    <a id="img23" height=150px> <img src="~/Images\color23.jpg" height="80px">P23</a>
+                    <a id="img24" height=150px> <img src="~/Images\color24.jpg" height="80px">P24</a>
+                    <a id="img25" height=150px> <img src="~/Images\color25.jpg" height="80px">P25</a>
+                    <a id="img26" height=150px> <img src="~/Images\color26.jpg" height="80px">P26</a>
+                    <a id="img27" height=150px> <img src="~/Images\color27.jpg" height="80px">P27</a>
+                    <a id="img28" height=150px> <img src="~/Images\color28.jpg" height="80px">P28</a>
+
+                </div>
+
+</body>
+</html>

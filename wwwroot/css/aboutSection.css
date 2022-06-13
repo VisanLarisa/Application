@@ -1,0 +1,24 @@
+﻿.text {
+    color: darkgray;
+    text-align: center;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.about-section {
+    font-family: 'Brush Script MT', cursive;
+}
+
+.text-align:center {
+}
+
+.container2 {
+    /*font-family: 'Brush Script MT', cursive;*/
+    font-size: xx-large
+}

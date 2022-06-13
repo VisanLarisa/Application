@@ -1,0 +1,12 @@
+#filterCanvas{
+    background-image: url(../background.jpg);
+}
+.container-fluid{
+  text-align: center;
+}
+
+html {
+  box-sizing: border-box;
+  }
+  *, *:before, *:after {
+  box-sizing: inherit;} 

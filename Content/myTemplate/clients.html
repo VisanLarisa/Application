@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style/meniu.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="style/clients.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="scripts/video.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <div class="topnav">
+            <a  href="meniu.html">Home</a>
+            <a class="active" href="clients.html">Clients</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="LogIn.html">LogIn</a>
+
+          </div>
+        <h1 style="color: rgb(0, 174, 255); text-align: center; margin-top: 50px; font-family: Geneva, Verdana, sans-serif;">Do you have a specific issue with any part of your car? </h1>
+              <h2 style="color :rgb(0, 132, 255) ; padding-left: 10%; padding-right: 10%; margin-top: 2cm;" >
+                  If you have any problem with one of the part of your car, you can make here a picture and we will contact you to tell you what to do.
+              </h2>
+              <h2 style="color:rgb(0, 132, 255) ; padding-left: 10%; padding-right: 10%;">
+                  It can be a problem that can be resolved by yourself and you don t need to come to our service.
+              </h2>
+              <h2 style="color: rgb(0, 132, 255); padding-left: 10%; padding-right: 10%;">
+                  Or we can see what is the problem and we will contact you to say that you will need to program ameeting to our service to resolve your problem.
+              </h2>
+              <div style="color :rgb(0, 132, 255) ; padding-left: 10%; padding-right: 10%; text-align: center;">
+                  <button id="shoot" class="btn btn-danger" style="padding-left: 10%; padding-right: 10%; text-align: center;">Take / Retake picture</button>
+              </div>
+        <div class="container-fluid" >
+            
+            <div class="row">
+                <div class="col-md-4" style=" padding-left: 10%; padding-right: 10%; text-align: center;">
+                    <h3></h3>
+                    <video id="video" width="100%" height="600">
+                        <p>Your browser does not support HTML 5 video.</p>
+                    </video>
+                </div>
+                <div class="col-md-8" >
+                    <h3></h3>
+                    <canvas id="clearCanvas" width="0%" height="0%"></canvas>
+                </div>
+                
+            </div>
+            <hr>
+            <div class="row">
+                <div style="color :rgb(0, 132, 255) ; padding-left: 10%; padding-right: 10%; text-align: center;" ></div>
+                <h2 style="color :rgb(0, 132, 255) ; padding-left: 10%; padding-right: 10%; text-align: center;" >
+                    This is your photo:
+                </h2>
+                </div>
+                <div class="col-md-4" style=" padding-left: 10%; padding-right: 10%; text-align: center;">
+                    <canvas id="snapshotCanvas" width="500%" height="300%" style="text-align: center;"></canvas>
+                </div>
+                <div class="col-md-8">
+                    <div 
+                        class="row" id="gallery">                        
+                    </div>
+                    
+                </div>
+                
+                <h2 style="color :aqua ; padding-left: 10%; padding-right: 10%;" >
+                        Now, you can download the image by pressing below, and send it to our e-mail:
+                    </h2>
+                    <div style="color :aqua ; padding-left: 10%; padding-right: 10%; text-align: center;">
+                          <a id="download" download="myImage.png" href="" onclick="download_img(this);">Download to myImage.png</a>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>

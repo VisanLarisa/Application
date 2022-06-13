@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/meniu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/servicesOffered.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <div>
+        <h1 style="text-align: center; color: grey;">Services</h1>
+    </div>
+    <!-- style="width:300px;height: 300px;" -->
+    <div class="row">
+        <div class="column container2">
+
+            <img src="~/Images/Schimbare-anvelope.jpg" alt="Avatar" class="image" style="width:100%;height: 400px;">
+            <div class="middle ">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Wheels" asp-action="Index">Wheels</a>
+                @*<button class="text" type="button" style="color: navy;text-align: center;"><a href="@Url.Content("~/Views/Wheels/")Index.cshtml">WHEELS</a>*@
+            </div>>
+        </div>
+        <div class="column container2">
+            <img src="~/Images/vopsirea-masinii.jpg" alt="vopsire" class="image" style="width:100%;height: 400px;">
+            <div class="middle">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Dye" asp-action="Index">Dye</a>
+
+                @*<button class="text" type="button" style="color:navy; text-align: center;">  <a class="nav-link text-dark" asp-area="" asp-controller="Dye" asp-action="Index">Dye</a> </button>*@
+            </div>
+
+        </div>
+        <div class="column container2">
+            <img src="~/Images/download.jpg" alt="download" class="image" style="width:100%;height:400px;">
+            <div class="middle">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Repair" asp-action="Index">Repair</a>
+                @*<button class="text" type="button" style="color:navy; text-align: center;"> </button>*@
+            </div>
+        </div>
+    </div>
+</body>
+</html>

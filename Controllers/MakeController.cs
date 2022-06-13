@@ -39,11 +39,11 @@ namespace Application.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddMake(Make model)
+        public IActionResult AddMake(Make make)
         {
             if (ModelState.IsValid)
             {
-                _makeRepository.Insert(model);
+                _makeRepository.Insert(make);
                 _makeRepository.Save();
                 return RedirectToAction("Index", "Make");
             }

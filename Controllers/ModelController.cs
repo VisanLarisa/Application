@@ -12,11 +12,13 @@ namespace Application.Controllers
     {
         private ApplicationDbContext _dbContext;
         private IRepository<Model> _modelRepository;
+        private IRepository<Make> _makeRepository;
 
-        public ModelController(ApplicationDbContext context, IRepository<Model> repository)
+        public ModelController(ApplicationDbContext context, IRepository<Model> repository, IRepository<Make> repositoryMake)
         {
             _dbContext = context;
             _modelRepository = repository;
+            _makeRepository = repositoryMake;
         }
         public IActionResult Index()
         {
@@ -32,13 +34,21 @@ namespace Application.Controllers
             return View();
         }
 
+        
+
         [HttpPost]
         public IActionResult AddModel(Model model)
         {
             if (ModelState.IsValid)
             {
+                List<Make> makes =(List<Make>) _makeRepository.GetAll();
+                Make make = makes.Find(m => m.BrandName == model.Make.BrandName);
+                model.Make = make;
+                //nu se face conexiunea intre model si make;
+
                 _modelRepository.Insert(model);
                 _modelRepository.Save();
+
                 return RedirectToAction("Index", "Model");
             }
             return View();
