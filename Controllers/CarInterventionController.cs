@@ -1,5 +1,6 @@
 ﻿using Application.Data;
 using Application.Models;
+using Application.Models.Base;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,11 @@ namespace Application.Controllers
         {
             _dbContext = context;
             _repository = repository;
-
+        }
+        public CarInterventionController(ApplicationDbContext context)
+        {
+            _dbContext = context;
+            _repository = new Repository<CarIntervention>(context);
         }
         public IActionResult Index()
         {

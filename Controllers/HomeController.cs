@@ -28,7 +28,7 @@ namespace Application.Controllers
             //_dbContext.Makes.Add(make);
             //_dbContext.SaveChanges();
             //citire
-            var makes=_dbContext.Makes.ToList();
+            //var makes=_dbContext.Makes.ToList();
             //stergere
             //Make toDelete = makes.FirstOrDefault();
             //if(toDelete!=null)
@@ -36,7 +36,7 @@ namespace Application.Controllers
             //    _dbContext.Makes.Remove(toDelete);
             //    _dbContext.SaveChanges();
             //}
-            return View(makes);
+            return View();
         }
 
         [Authorize]
