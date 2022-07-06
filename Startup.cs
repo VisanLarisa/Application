@@ -37,6 +37,8 @@ namespace Application
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));   //makes my app instantiate an IMakeRepository object as RepositoryMake (when has a constructor)
+
+           // services.AddDbContext<Appointment2DbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -36,6 +36,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.10" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.7.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 
@@ -113,6 +117,7 @@
     <None Include="wwwroot\js\image2.js" />
     <None Include="wwwroot\js\image3.js" />
     <None Include="wwwroot\js\meniu.js" />
+    <None Include="wwwroot\lib\daypilot\daypilot-all.min.js" />
     <None Include="wwwroot\sw.js" />
     <None Include="wwwroot\js\video.js" />
     <None Include="wwwroot\sounds\bentley.mp3" />
@@ -130,6 +135,10 @@
     <None Include="wwwroot\sounds\suzuki.mp3" />
     <None Include="wwwroot\sounds\volvo.mp3" />
     <None Include="wwwroot\videos\service_Trim.mp4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\lib\daypilot\daypilot-all.min.d.ts" />
   </ItemGroup>
 
 </Project>
