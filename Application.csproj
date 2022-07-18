@@ -23,9 +23,25 @@
 
   <ItemGroup>
     <Compile Remove="Controllers\CarsController.cs" />
+    <Compile Remove="Data\Migrations\20220707160231_AddEventTable.cs" />
+    <Compile Remove="Data\Migrations\20220707160231_AddEventTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220707160904_AddEventTable.cs" />
+    <Compile Remove="Data\Migrations\20220707160904_AddEventTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220707161122_AddEventTable.cs" />
+    <Compile Remove="Data\Migrations\20220707161122_AddEventTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220707161354_AddEventTable.cs" />
+    <Compile Remove="Data\Migrations\20220707161354_AddEventTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220707161535_AddEventTableUpdate.cs" />
+    <Compile Remove="Data\Migrations\20220707161535_AddEventTableUpdate.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220707184152_AddEventTableUpdate.cs" />
+    <Compile Remove="Data\Migrations\20220707184152_AddEventTableUpdate.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220708205015_UpdateEventTypes.cs" />
+    <Compile Remove="Data\Migrations\20220708205015_UpdateEventTypes.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Bootstrap.v3.Datetimepicker.CSS" Version="4.17.49" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />
@@ -45,6 +61,7 @@
 
   <ItemGroup>
     <Folder Include="Content\scripts\" />
+    <Folder Include="wwwroot\lib\bootstrap\fonts\" />
   </ItemGroup>
 
   <ItemGroup>

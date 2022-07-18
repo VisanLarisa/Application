@@ -8,11 +8,11 @@ namespace Application.Models
     public interface IRepository <T>
     {
         IEnumerable<T> GetAll();
-        T GetById(Guid MakeId);
-        void Insert(T make);
-        void Update(T make);
-        void Delete(Guid makeId);
-        void Delete(T make);
+        T GetById(Guid id);
+        void Insert(T obj);
+        void Update(T obj);
+        void Delete(Guid id);
+        void Delete(T obj);
         void Save();
     }
 }

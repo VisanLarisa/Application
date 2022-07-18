@@ -30,6 +30,8 @@ namespace Application.Data
             builder.Entity<Intervention>().HasMany(x => x.CarInterventions).WithOne(x => x.Intervention).HasForeignKey(x=>x.InterventionId);
             
             builder.Entity<Appointment2>();
+
+            builder.Entity<Event>();
         }
 
         public DbSet<Make> Makes { get; set; }
@@ -39,5 +41,7 @@ namespace Application.Data
         public DbSet<CarIntervention> CarInterventions { get; set; }
         public DbSet<Intervention> Interventions { get; set; }
         public DbSet<Appointment2> Appointments2 { get; set; }
+        public DbSet<Event> Events { get; set; }
+
     }
 }

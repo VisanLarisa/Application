@@ -50,7 +50,7 @@ window.onload = function () {//onload pt ca am getElementById care cere DOM
         var lon1 = toRadian(origin[1]),
         lat1 = toRadian(origin[0]),
         lon2 = toRadian(destination[1]),
-         lat2 = toRadian(destination[0]);
+        lat2 = toRadian(destination[0]);
     
         var deltaLat = lat2 - lat1;
         var deltaLon = lon2 - lon1;
