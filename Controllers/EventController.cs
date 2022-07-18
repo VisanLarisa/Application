@@ -46,8 +46,8 @@ namespace Application.Controllers
         [Authorize]
         public IActionResult Privacy()
         {
-            var events = _dbContext.Events.ToList();
-            return View(events);
+            //var events = _dbContext.Events.ToList();
+            return View();
         }
 
 

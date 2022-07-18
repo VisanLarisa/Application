@@ -20,7 +20,7 @@
                     });
                 });
 
-                /*  events.push({
+/*                  events.push({
                     title: "problem",
                     description: "description",
                     start: moment('2022-06-26 19:15:14'),
@@ -57,9 +57,9 @@
                 $('#myModal #eventTitle').text(calEvent.title);
                 var $description = $('<div/>');
                 $description.append($('<p/>').html('<b>Start:</b>' + calEvent.start.format("DD-MMM-YYYY HH:mm a")));
-/*                if (calEvent.end != null) {
+                if (calEvent.end != null) {
                     $description.append($('<p/>').html('<b>End:</b>' + calEvent.end.format("DD-MMM-YYYY HH:mm a")));
-                }*/
+                }
                 $description.append($('<p/>').html('<b>Description:</b>' + calEvent.description));
                 $('#myModal #pDetails').empty().html($description);
 
@@ -126,7 +126,7 @@
             $('#divEndDate').hide();
         }
         else {
-            $('#divEndDate').show();
+            $('#divEndDate').hide();    //.show()
         }
     });
     function SaveEvent(data) {
@@ -196,6 +196,5 @@
             IsFullDay: $('#chkIsFullDay').is(':checked')
         }
         SaveEvent(data);
-        // call function for submit data to the server
     })
 })

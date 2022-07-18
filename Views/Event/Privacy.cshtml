@@ -34,10 +34,10 @@
                 <h4 class="modal-title"><span id="eventTitle"></span></h4>
             </div>
             <div class="modal-body">
-                <button id="btnDelete" class="btn btn-default btn-sm pull-right">
+                <button id="btnDelete" class="btn btn-default btn-sm pull-right" style="display: none;">
                     <span class="glyphicon glyphicon-remove"></span> Remove
                 </button>
-                <button id="btnEdit" class="btn btn-default btn-sm pull-right" style="margin-right:5px;">
+                <button id="btnEdit" class="btn btn-default btn-sm pull-right" style="margin-right:5px; display:none;">
                     <span class="glyphicon glyphicon-pencil"></span> Edit
                 </button>
                 <p id="pDetails"></p>
@@ -60,10 +60,14 @@
                 <form class="form-horizontal">
                     <input type="hidden" id="hdEventID" value="0" />
                     <div class="form-group">
+                        <label></label>
+
                         <label>Subject</label>
                         <input type="text" id="txtSubject" class="form-control" />
                     </div>
                     <div class="form-group">
+                        <label>Please, select the preferred day for the intervention </label>
+                        <br />
                         <label>Start</label>
                         <div class="input-group date" id="dtp1">
                             <input type="text" id="txtStart" class="form-control" />
@@ -74,7 +78,7 @@
                     </div>
                     <div class="form-group">
                         <div class="checkbox">
-                            <label><input type="checkbox" id="chkIsFullDay" checked="checked" />  Is Full Day event</label>
+                            <label><input type="checkbox" id="chkIsFullDay" checked="checked" style="display: none" />  </label>
                         </div>
                     </div>
                     <div class="form-group" id="divEndDate" style="display:none">
@@ -87,10 +91,12 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label>Please write a description of the problem and don't forget to mention also the phone number for we to confirm you the appointment</label>
+
                         <label>Description</label>
                         <textarea id="txtDescription" rows="3" class="form-control"></textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" style="display:none;">
                         <label>Theme Color</label>
                         <select id="ddThemeColor" class="form-control">
                             <option value="">Default</option>
