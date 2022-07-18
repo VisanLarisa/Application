@@ -27,7 +27,7 @@
     <div class="container-fluid">
 
         <div class="row">
-            <div class="col-md-4" style=" padding-left: 10%; padding-right: 10%; text-align: center;">
+            <div class="col-md-4-lg-8" style=" padding-left: 10%; padding-right: 10%; text-align: center;">
                 <h3></h3>
                 <video id="video" width="100%" height="600">
                     <p>Your browser does not support HTML 5 video.</p>
@@ -41,22 +41,24 @@
         </div>
         <hr>
         <div class="row">
-            <div style="color :rgb(0, 132, 255) ; padding-left: 10%; padding-right: 10%; text-align: center;"></div>
-            <h2 style="color :rgb(0, 132, 255) ; padding-left: 10%; padding-right: 10%; text-align: center;">
+@*            <div style="color :rgb(0, 132, 255) ; padding-left: 10%; padding-right: 10%; text-align: center;"></div>
+*@            <h2 style="color :rgb(0, 132, 255) ; padding-left: 10%; padding-right: 10%; text-align: left;">
                 This is your photo:
             </h2>
         </div>
         <div class="col-md-4" style=" padding-left: 10%; padding-right: 10%; text-align: center;">
             <canvas id="snapshotCanvas" width="500%" height="300%" style="text-align: center;"></canvas>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-4">
             <div class="row" id="gallery">
             </div>
 
         </div>
 
         <h2 style="color :aqua ; padding-left: 10%; padding-right: 10%;">
-            Now, you can download the image by pressing below, and send it to our e-mail:
+            Now, you can download the image by pressing below, and send it to our <span>
+    <a asp-area="" asp-controller="Contact" asp-action="Index">e-mail</a>. You can send more pictures. We'll answer in 1 up to 3 days.
+</span>
         </h2>
         <div style="color :aqua ; padding-left: 10%; padding-right: 10%; text-align: center;">
             <a id="download" download="myImage.png" href="" onclick="download_img(this);">Download to myImage.png</a>

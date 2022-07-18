@@ -12,24 +12,37 @@
     <div>
         <h1 style="align-items: center; color: aliceblue;text-align: center; margin: 5%">Wheels</h1>
         <p style="color: aliceblue; padding-left: 10%; padding-right: 10%; align-items: center; text-align: center;">We are not wondering why you are here.Well, we have the perfect solution for you!!!</p>
-        <p style="color: aliceblue;padding-left: 10%; padding-right: 10%; text-align: center;">Here you can see our prices and if ypu want more details you can contact us <a href="contact.html">here. </a></p>
+        <p style="color: aliceblue;padding-left: 10%; padding-right: 10%; text-align: center;">
+            Here you can see our prices and if ypu want more details you can contact us   <span>
+                <a asp-area="" asp-controller="Contact" asp-action="Index">here.</a>
+                </a>
+            </span>
+        </p>
     </div>
     <div style="align-items: center; text-align: center;">
         <img src="~/Images/Since 1999.png" id="center" style="height: 70%; width: 90%; padding-left: 10%; padding-right: 10%; align-items: center;">
     </div>
 
     <div style="padding-left: 10%; padding-right: 10%;">
-        <h1 style="color: aliceblue;">List of prices</h1>
+        <h1 style="color: aliceblue;">List of prices for tires (workmanship included)</h1>
         <dl>
-            <dt style="color: aliceblue;">Small cars</dt>
-            <dd style="color: aliceblue; "> - winter season: 40 lei /wheel</dd>
-            <dd style="color: aliceblue;"> - summer season: 50 lei/wheel</dd>
-            <dt style="color: aliceblue;">Medium cars</dt>
-            <dd style="color: aliceblue;"> - winter season: 60 lei /wheel</dd>
-            <dd style="color: aliceblue; "> - summer season: 80 lei/wheel</dd>
+            <dt style="color: aliceblue;">Small </dt>
+            <dd style="color: aliceblue; "> - winter season: 80 RON /wheel</dd>
+            <dd style="color: aliceblue;"> - summer season: 100 RON/wheel</dd>
+            <dt style="color: aliceblue;">Medium </dt>
+            <dd style="color: aliceblue;"> - winter season: 120 RON /wheel</dd>
+            <dd style="color: aliceblue; "> - summer season: 160 RON/wheel</dd>
             <dt style="color: aliceblue;">SUV</dt>
-            <dd style="color: aliceblue;"> - winter season: 100 lei /wheel</dd>
-            <dd style="color: aliceblue;"> - summer season: 120 lei/wheel</dd>
+            <dd style="color: aliceblue;"> - winter season: 200 RON /wheel</dd>
+            <dd style="color: aliceblue;"> - summer season: 240 RON/wheel</dd>
+        </dl>
+    </div>
+
+    <div style="padding-left: 10%; padding-right: 10%;">
+        <h1 style="color: aliceblue;">Other services:</h1>
+        <dl>
+            <dt style="color: aliceblue;">Vulcaniation: 70 RON / wheel</dt>
+            <dt style="color: aliceblue;">Balancing: 50 RON / wheel</dt>
         </dl>
     </div>
 
