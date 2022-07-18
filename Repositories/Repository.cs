@@ -1,4 +1,5 @@
 ﻿using Application.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,7 +50,7 @@ namespace Application.Models.Base
 
         public void Update(T model)
         {
-           // _context.Entry(make).State = MakeState.Modified;
+            _context.Entry(model).State = EntityState.Modified;
         }
 
         private bool disposed = false;

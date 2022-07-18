@@ -11,34 +11,20 @@ using System.Threading.Tasks;
 
 namespace Application.Controllers
 {
-    public class HomeController : Controller
+    public class DoctorController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<DoctorController> _logger;
         private ApplicationDbContext _dbContext;
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
+
+        public DoctorController(ILogger<DoctorController> logger, ApplicationDbContext context)
         {
             _dbContext = context;
             _logger = logger;
         }
-
-        public IActionResult Index()    //returneaza View 
+        public IActionResult Index()
         {
-            //adaugare
-           // Make make = new Make() { BrandName = "Dacia", OriginCountry = "Romania" };
-            //_dbContext.Makes.Add(make);
-            //_dbContext.SaveChanges();
-            //citire
-            //var makes=_dbContext.Makes.ToList();
-            //stergere
-            //Make toDelete = makes.FirstOrDefault();
-            //if(toDelete!=null)
-            //{
-            //    _dbContext.Makes.Remove(toDelete);
-            //    _dbContext.SaveChanges();
-            //}
             return View();
         }
-
         [Authorize]
         public IActionResult Privacy()
         {
@@ -50,7 +36,5 @@ namespace Application.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-       
     }
 }

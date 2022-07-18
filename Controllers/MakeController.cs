@@ -17,7 +17,7 @@ namespace Application.Controllers
         {
             _dbContext = context;
             // _makeRepository = new IMakeRepository(context);
-            _makeRepository = repository;
+             _makeRepository = repository;
         }
 
     //    public MakeController(IMakeRepository repository)

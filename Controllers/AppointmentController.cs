@@ -19,9 +19,17 @@ namespace Application.Controllers
         public IActionResult Index()
         {
             //citire
-            var appointments = _dbContext.Makes.ToList();
+            var appointments = _dbContext.Appointments.ToList();
             return View(appointments);
         }
+
+
+        [Microsoft.AspNetCore.Authorization.Authorize]
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
         [HttpGet]
         public IActionResult AddAppointment()
         {

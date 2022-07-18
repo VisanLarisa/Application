@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Application.Models
 {
-    public class Appointment: Entity
+    public class Event: Entity
     {
-        public DateTime Start { get; set; }
-        public DateTime End { get; set; }
         public string Subject { get; set; }
         public string Description { get; set; }
+        public DateTime Start { get; set; }
+        public DateTime End { get; set; }
         public string ThemeColor { get; set; }
         public bool IsFullDay { get; set; }
     }

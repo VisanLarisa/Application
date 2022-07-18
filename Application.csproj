@@ -23,9 +23,25 @@
 
   <ItemGroup>
     <Compile Remove="Controllers\CarsController.cs" />
+    <Compile Remove="Data\Migrations\20220707160231_AddEventTable.cs" />
+    <Compile Remove="Data\Migrations\20220707160231_AddEventTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220707160904_AddEventTable.cs" />
+    <Compile Remove="Data\Migrations\20220707160904_AddEventTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220707161122_AddEventTable.cs" />
+    <Compile Remove="Data\Migrations\20220707161122_AddEventTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220707161354_AddEventTable.cs" />
+    <Compile Remove="Data\Migrations\20220707161354_AddEventTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220707161535_AddEventTableUpdate.cs" />
+    <Compile Remove="Data\Migrations\20220707161535_AddEventTableUpdate.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220707184152_AddEventTableUpdate.cs" />
+    <Compile Remove="Data\Migrations\20220707184152_AddEventTableUpdate.Designer.cs" />
+    <Compile Remove="Data\Migrations\20220708205015_UpdateEventTypes.cs" />
+    <Compile Remove="Data\Migrations\20220708205015_UpdateEventTypes.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Bootstrap.v3.Datetimepicker.CSS" Version="4.17.49" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />
@@ -36,11 +52,16 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.10" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.7.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Content\scripts\" />
+    <Folder Include="wwwroot\lib\bootstrap\fonts\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -113,6 +134,7 @@
     <None Include="wwwroot\js\image2.js" />
     <None Include="wwwroot\js\image3.js" />
     <None Include="wwwroot\js\meniu.js" />
+    <None Include="wwwroot\lib\daypilot\daypilot-all.min.js" />
     <None Include="wwwroot\sw.js" />
     <None Include="wwwroot\js\video.js" />
     <None Include="wwwroot\sounds\bentley.mp3" />
@@ -130,6 +152,10 @@
     <None Include="wwwroot\sounds\suzuki.mp3" />
     <None Include="wwwroot\sounds\volvo.mp3" />
     <None Include="wwwroot\videos\service_Trim.mp4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\lib\daypilot\daypilot-all.min.d.ts" />
   </ItemGroup>
 
 </Project>

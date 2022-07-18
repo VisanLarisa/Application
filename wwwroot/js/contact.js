@@ -11,7 +11,7 @@ window.onload = function () {//onload pt ca am getElementById care cere DOM
     function getPosition(myLocation){
         navigator.geolocation.getCurrentPosition((position) => {
         console.log(position);
-        var distance=getDistanceRad([position.coords.latitude, position.coords.longitude], [44.43857823331789,  26.070835590362552]); 
+            var distance = getDistanceRad([position.coords.latitude, position.coords.longitude], [365.6363525390625, 378.79545497894287]); 
 
        if(x==1)
             { 
@@ -50,7 +50,7 @@ window.onload = function () {//onload pt ca am getElementById care cere DOM
         var lon1 = toRadian(origin[1]),
         lat1 = toRadian(origin[0]),
         lon2 = toRadian(destination[1]),
-         lat2 = toRadian(destination[0]);
+        lat2 = toRadian(destination[0]);
     
         var deltaLat = lat2 - lat1;
         var deltaLon = lon2 - lon1;
@@ -73,7 +73,15 @@ window.onload = function () {//onload pt ca am getElementById care cere DOM
     }
 
     function mapReady() {
-        map = L.map('map').setView([44.43857823331789, 26.070835590362552], 7);
+        //container point
+        //x: 365.6363525390625
+        //y: 378.79545497894287
+
+        //layer point
+        //x: 564.6363525390625
+        //y: 664.7954549789429
+        
+        map = L.map('map').setView([365.6363525390625, 378.79545497894287], 7);
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
             maxZoom: 18,
@@ -83,7 +91,7 @@ window.onload = function () {//onload pt ca am getElementById care cere DOM
             accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
         }).addTo(map);  //asta imi afiseaza mapa
 
-        myLocation = L.marker([44.43857823331789,  26.070835590362552]).addTo(map);     //asta imi afiseaza marker
+        myLocation = L.marker([365.6363525390625, 378.79545497894287]).addTo(map);     //asta imi afiseaza marker
         //x=0;
 
         map.addEventListener('click', (e) => {

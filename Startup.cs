@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -37,11 +38,20 @@ namespace Application
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));   //makes my app instantiate an IMakeRepository object as RepositoryMake (when has a constructor)
+
+           // services.AddDbContext<Appointment2DbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            var cultureInfo = new CultureInfo("en-GB");
+            cultureInfo.NumberFormat.CurrencySymbol = "€";
+
+            CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+            CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -70,10 +80,15 @@ namespace Application
                 endpoints.MapControllerRoute(
                     name: "edit",
                     pattern: "{controller=Make}/{action=EditMake}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "getEvent",
+                    pattern: "{controller=Event}/{action=Index}/{id?}");  //?
 
                 endpoints.MapRazorPages();
             });
 
-          }
+          
+        }
+
     }
 }
